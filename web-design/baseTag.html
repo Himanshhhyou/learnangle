@@ -2,28 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Show HTML Code with Prism.js</title>
-    
-    <!-- Prism.js CSS (Theme) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <title>VS Code Style Code Viewer</title>
 
-    <!-- Bootstrap (optional for styling) -->
+    <!-- Prism.js Theme (VS Code-like) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+
+    <!-- Optional: Bootstrap for layout -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
-    
+
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #1e1e1e;
+            color: #fff;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            padding: 40px 0;
         }
+
+        .code-container {
+            width: 90%;
+            margin: auto;
+        }
+
         pre {
-            border-radius: 10px;
-            padding: 20px;
+            font-size: 1.1rem; /* Bigger font */
+            border-radius: 12px;
+            padding: 25px;
+            overflow-x: auto;
         }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #d4d4d4;
+        }
+
+        /* Optional Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
     </style>
 </head>
 <body>
 
-<div class="container mt-5">
-    <h1 class="mb-4">HTML Code Display with Prism.js</h1>
+<div class="code-container">
+    <h1>HTML Code Viewer</h1>
 
     <pre><code class="language-markup">
 &lt;!DOCTYPE html&gt;
@@ -42,7 +62,7 @@
     </code></pre>
 </div>
 
-<!-- Prism.js JS -->
+<!-- Prism.js Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
 
