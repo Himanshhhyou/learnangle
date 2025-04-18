@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show HTML Code with Prism.js</title>
+    
+    <!-- Prism.js CSS (Theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap (optional for styling) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        pre {
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">HTML Code Display with Prism.js</h1>
+
+    <pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Base Tag&lt;/title&gt;
+        &lt;base href="img/"&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;Base Tag&lt;/h1&gt;
+        &lt;img src="flower.jpg"&gt;
+        &lt;img src="dog.jpg"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+</div>
+
+<!-- Prism.js JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+
+</body>
+</html>
