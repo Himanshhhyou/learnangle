@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Prism Code Viewer - Light Theme</title>
+  <title>VS Code Style Code Viewer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Prism Light Theme -->
+  <!-- Prism core -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
-
-  <!-- Fira Code Font -->
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
   <style>
     body {
-      background-color: #fff;
-      color: #000;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+      background-color: #ffffff;
+      color: #333;
+      font-family: 'Fira Code', monospace;
       padding: 1rem;
       margin: 0;
     }
@@ -28,21 +26,90 @@
 
     h2 {
       text-align: center;
-      color: #333;
-      margin-bottom: 1.5rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 0.95rem;
     }
 
     pre {
       font-size: 1rem;
-      padding: 1rem;
-      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
       overflow-x: auto;
-      background-color: #ffffff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
       line-height: 1.6;
     }
 
-    /* Responsive font size */
+    /* Highlight colors inspired by VS Code Light+ */
+    code[class*="language-"],
+    pre[class*="language-"] {
+      color: #000;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: #6a9955;
+      font-style: italic;
+    }
+
+    .token.punctuation {
+      color: #393A34;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+      color: #b20000;
+    }
+
+    .token.boolean,
+    .token.number {
+      color: #098658;
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+      color: #a31515;
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string {
+      color: #0000ff;
+    }
+
+    .token.atrule,
+    .token.keyword {
+      color: #0000ff;
+    }
+
+    .token.function {
+      color: #795E26;
+    }
+
+    .token.regex,
+    .token.important,
+    .token.variable {
+      color: #d16969;
+    }
+
     @media (max-width: 600px) {
       pre {
         font-size: 1.1rem;
@@ -54,7 +121,7 @@
 
   <div class="code-container">
     <h2>Base Tag</h2>
-    <b>File Name:</b> <a href="">baseTag.html</a><br><br>
+    <b>File Name:</b> <a href="#">baseTag.html</a><br><br>
 
     <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
