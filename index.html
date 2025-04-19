@@ -1,100 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnAngle - Give Wings to your Learning</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Code Snippet Sharer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Highlight.js CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .code-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        pre, code {
+            border-radius: 0.5rem;
+        }
+    </style>
 </head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">LearnAngle</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="web-design/index.html">Web Design</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Test Corner
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Web Design</a></li>
-                                <li><a class="dropdown-item" href="#">Python</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Practical Test</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Visit Youtube</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-indigo-400">Code Snippet Sharer</h1>
+            <p class="mt-2 text-gray-400">Share and showcase your HTML & CSS creations</p>
+        </div>
     </header>
 
-<h1 style="font-size: 3rem; height: 70%; text-align: center; margin-bottom: 200px;">This Website is under Development</h1>
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- HTML Section -->
+            <section class="bg-gray-800 rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-indigo-300 mb-4">HTML Code</h2>
+                <div class="code-container">
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Sample Page&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;p&gt;This is a sample HTML structure.&lt;/p&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+            </section>
 
-<footer class="bg-dark text-white pt-4 mt-5">
-    <div class="container">
-        <div class="row">
-            <!-- About -->
-            <div class="col-md-4 mb-3">
-                <h5>LearnAngle</h5>
-                <p>Empowering learners with practical knowledge in Web, Python, and IoT. Join us and give wings to your learning journey!</p>
-            </div>
+            <!-- CSS Section -->
+            <section class="bg-gray-800 rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-indigo-300 mb-4">CSS Code</h2>
+                <div class="code-container">
+                    <pre><code class="language-css">body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
 
-            <!-- Quick Links -->
-            <div class="col-md-4 mb-3">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Web Design</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Python</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">IoT</a></li>
-                </ul>
-            </div>
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
 
-            <!-- Contact Info -->
-            <div class="col-md-4 mb-3">
-                <h5>Contact Us</h5>
-                <p>Email: learnangleconnect@gmail.com</p>
-                <!-- <p>Phone: +91-9876543210</p> -->
-                <p>Location: Prayagraj, India</p>
-            </div>
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.6;
+}</code></pre>
+                </div>
+            </section>
         </div>
 
-        <div class="text-center py-3 border-top mt-3">
-            &copy; 2025 LearnAngle. All Rights Reserved.
+        <!-- Preview Section -->
+        <section class="mt-6 bg-gray-800 rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-indigo-300 mb-4">Live Preview</h2>
+            <iframe class="w-full h-64 border-2 border-gray-700 rounded-lg" id="preview"></iframe>
+        </section>
+
+        <!-- Share Button -->
+        <div class="mt-6 text-center">
+            <button onclick="shareCode()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                Share Code
+            </button>
         </div>
-    </div>
-</footer>
+    </main>
 
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Code Snippet Sharer. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
+    <script>
+        // Initialize Highlight.js
+        document.addEventListener('DOMContentLoaded', () => {
+            hljs.highlightAll();
+            updatePreview();
+        });
+
+        // Update iframe preview
+        function updatePreview() {
+            const htmlCode = document.querySelector('.language-html').textContent;
+            const cssCode = `<style>${document.querySelector('.language-css').textContent}</style>`;
+            const iframe = document.getElementById('preview');
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(htmlCode.replace('</head>', `${cssCode}</head>`));
+            iframeDoc.close();
+        }
+
+        // Share code (placeholder functionality)
+        function shareCode() {
+            const htmlCode = document.querySelector('.language-html').textContent;
+            const cssCode = document.querySelector('.language-css').textContent;
+            const shareData = {
+                title: 'My Code Snippet',
+                text: `HTML:\n${htmlCode}\n\nCSS:\n${cssCode}`,
+                url: window.location.href
+            };
+            if (navigator.share) {
+                navigator.share(shareData).then(() => {
+                    alert('Code shared successfully!');
+                }).catch(err => {
+                    console.error('Error sharing:', err);
+                    alert('Sharing failed. Code copied to clipboard!');
+                    navigator.clipboard.writeText(shareData.text);
+                });
+            } else {
+                navigator.clipboard.writeText(shareData.text);
+                alert('Code copied to clipboard!');
+            }
+        }
+    </script>
 </body>
-
 </html>
